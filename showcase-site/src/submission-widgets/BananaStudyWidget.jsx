@@ -50,16 +50,16 @@ const BlankPage = ({ width = 800, height = 600, backgroundColor = "#FFFBE5", bor
   const getBoxTier = (elapsedTime) => {
     let boxTier = "";
     switch (true) {
-      case elapsedTime < 1:
+      case elapsedTime < 60:
         boxTier = "Bronze";
         break;
-      case elapsedTime < 2:
+      case elapsedTime < 120:
         boxTier = "Silver";
         break;
-      case elapsedTime < 3:
+      case elapsedTime < 180:
         boxTier = "Gold";
         break;
-      case elapsedTime < 4:
+      case elapsedTime < 240:
         boxTier = "Platinum";
         break;
       default:
@@ -207,7 +207,7 @@ const BlankPage = ({ width = 800, height = 600, backgroundColor = "#FFFBE5", bor
         const timeout = setTimeout(() => {
           reset(0, false);
           setShowWarning(true);
-        }, 3000); // 3 seconds for testing
+        }, 30000); // 3 seconds for testing
 
         setFocusTimeout(timeout);
       }
